@@ -31,7 +31,8 @@ Now you can use geo-service in any of your service or controller.
 
 Example for controller:
 
-`@Autowired
+```
+@Autowired
 private GeoIPLocationService geoIPLocationService;
 
 public ModelAndView someMethod() {
@@ -45,13 +46,15 @@ public ModelAndView someMethod() {
         e.printStackTrace();
     }
 }
-`
+```
 
 # Start own server rest api geo ip service
 
 Download geoip database as described bellow.
 And start SpringGeoipApplication class. 
+
 Now you can query database at: http://localhost:8080/api/geo/ip/IPADDRESS
+
 For example:
 `http://localhost:8080/api/geo/ip/127.0.0.1`
 
