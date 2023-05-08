@@ -1,4 +1,4 @@
-package org.sitecenter.geoip.web;
+package org.sitecenter.geoip.server.web;
 
 import org.sitecenter.geoip.model.GeoIP;
 import org.sitecenter.geoip.service.GeoIPLocationService;

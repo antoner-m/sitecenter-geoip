@@ -57,7 +57,7 @@ And start SpringGeoipApplication class.
 Now you can query database at: http://localhost:8080/api/geo/ip/IPADDRESS
 
 For example:
-`http://localhost:8080/api/geo/ip/127.0.0.1`
+`http://localhost:8080/api/geo/ip/8.8.8.8`
 
 # Download geoip database
 
