@@ -18,7 +18,7 @@ Add this dependency to your maven pom.xml:
 <artifactId>geoip-common</artifactId>
 <version>0.0.1-SNAPSHOT</version>
 <scope>compile</scope>
-</dependency>`
+</dependency>
 ```
 
 Download geoip database as described bellow. You should download files to resources dir of your project:
