@@ -7,18 +7,19 @@ Project consist two modules:
 
 # How to use it in your spring project
 
-Clone this project and do:
+Clone this project to your local folder and execute:
 
 `mvn clean install`
 
 Add this dependency to your maven pom.xml:
-
-`<dependency>
+```
+<dependency>
 <groupId>org.sitecenter</groupId>
 <artifactId>geoip-common</artifactId>
 <version>0.0.1-SNAPSHOT</version>
 <scope>compile</scope>
 </dependency>`
+```
 
 Download geoip database as described bellow. You should download files to resources dir of your project:
 **./yourproject/src/main/resources/maxmind**.
@@ -65,4 +66,4 @@ For work we need to download actual geoip database from MaxMind.
 Signup for a MaxMind account at https://www.maxmind.com/en/geolite2/signup, which is now required to download even free/public GeoIP databases.
 
 Once you’ve set up an account, login to your account portal and select “Download Files” to access the databases.
-Then, you can download databases: GeoLite2-City.mmdb and GeoLite2-Country.mmdb to the folder **geoip-server/src/main/resources/maxmind**.
+Then, you can download databases: **GeoLite2-City.mmdb** and **GeoLite2-Country.mmdb** to the folder **geoip-server/src/main/resources/maxmind**.
