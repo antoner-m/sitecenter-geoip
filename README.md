@@ -1,5 +1,6 @@
 # sitecenter-geoip
-This is working project for detecting Country and City by given IP address.
+This is working project for detecting Country and City by given IP address. This project used at sitecenter.org
+[for detecting user location](https://www.sitecenter.org/tools/myip).
 
 Project consist two modules:
 **geoip-common** - classes needed for running as Spring Service
