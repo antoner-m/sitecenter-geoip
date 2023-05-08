@@ -5,8 +5,8 @@ Project consist two modules:
 **geoip-common** - classes needed for running as Spring Service
 **geoip-server** - classes for example standalone Rest api service
 
+# How to use it in your spring project
 
-#How to use it in your spring project
 Clone this project and do:
 
 `mvn clean install`
@@ -30,9 +30,9 @@ Add this line to any @Configuration class in your project:
 Now you can use geo-service in any of your service or controller.
 
 Example for controller:
-`
-    @Autowired
-    private GeoIPLocationService geoIPLocationService;
+
+`@Autowired
+private GeoIPLocationService geoIPLocationService;
 
 public ModelAndView someMethod() {
     try {
@@ -47,16 +47,16 @@ public ModelAndView someMethod() {
 }
 `
 
-#Start own server rest api geo ip service
+# Start own server rest api geo ip service
+
 Download geoip database as described bellow.
 And start SpringGeoipApplication class. 
 Now you can query database at: http://localhost:8080/api/geo/ip/IPADDRESS
 For example:
 `http://localhost:8080/api/geo/ip/127.0.0.1`
 
+# Download geoip database
 
-
-#Download geoip database
 For work we need to download actual geoip database from MaxMind.
 
 Signup for a MaxMind account at https://www.maxmind.com/en/geolite2/signup, which is now required to download even free/public GeoIP databases.
