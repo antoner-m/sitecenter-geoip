@@ -54,8 +54,12 @@ public class GeoIPLocationServiceImpl implements GeoIPLocationService {
             position.setFound(true);
             city = cityResponse.getCity().getName();
 
-            position.setLatitude((cityResponse.getLocation() != null) ? cityResponse.getLocation().getLatitude() : 0);
-            position.setLongitude((cityResponse.getLocation() != null) ? cityResponse.getLocation().getLongitude() : 0);
+            if (cityResponse.getLocation() != null
+                    && cityResponse.getLocation().getLatitude() != null
+                    && cityResponse.getLocation().getLongitude() != null) {
+                position.setLatitude(cityResponse.getLocation().getLatitude());
+                position.setLongitude(cityResponse.getLocation().getLongitude());
+            }
 
             continent = (cityResponse.getContinent() != null) ? cityResponse.getContinent().getName() : "";
             if (cityResponse.getCountry() != null) {
