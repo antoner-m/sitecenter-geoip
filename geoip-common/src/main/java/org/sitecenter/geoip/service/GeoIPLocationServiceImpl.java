@@ -83,6 +83,7 @@ public class GeoIPLocationServiceImpl implements GeoIPLocationService {
             }
         }
         location = String.format("%s, %s, %s", Objects.toString(continent, ""), Objects.toString(country, ""), Objects.toString(city, ""));
+
         position.setCity(cityResponse.getCity().getName());
         position.setCountry(country);
         position.setCountryIsoCode(countryCode);
