@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.net.InetAddress;
+import java.util.Objects;
 
 import static java.util.Objects.nonNull;
 
@@ -81,7 +82,7 @@ public class GeoIPLocationServiceImpl implements GeoIPLocationService {
                 continent = countryResponse.getContinent() == null ? "" : countryResponse.getContinent().getName();
             }
         }
-        location = String.format("%s, %s, %s", continent, country, city);
+        location = String.format("%s, %s, %s", Objects.toString(continent, ""), Objects.toString(country, ""), Objects.toString(city, ""));
         position.setCity(cityResponse.getCity().getName());
         position.setCountry(country);
         position.setCountryIsoCode(countryCode);
