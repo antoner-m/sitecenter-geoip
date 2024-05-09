@@ -1,5 +1,6 @@
 package org.sitecenter.geoip.config;
 
+import com.maxmind.db.CHMCache;
 import com.maxmind.db.Reader;
 import com.maxmind.geoip2.DatabaseReader;
 import lombok.extern.slf4j.Slf4j;
@@ -40,6 +41,7 @@ public class GeoLocationConfig {
            return  new DatabaseReader
                     .Builder(dbAsStream)
                     .fileMode(Reader.FileMode.MEMORY)
+                    .withCache(new CHMCache())
                     .build();
 
         } catch (IOException | NullPointerException e) {
@@ -63,6 +65,7 @@ public class GeoLocationConfig {
             return new DatabaseReader
                     .Builder(dbAsStream)
                     .fileMode(Reader.FileMode.MEMORY)
+                    .withCache(new CHMCache())
                     .build();
 
         } catch (IOException | NullPointerException e) {

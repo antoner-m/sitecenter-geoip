@@ -61,6 +61,11 @@
             <version>5.8.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.maxmind.db</groupId>
+            <artifactId>maxmind-db</artifactId>
+            <version>1.4.0</version>
+        </dependency>
     </dependencies>
 
     <build>
