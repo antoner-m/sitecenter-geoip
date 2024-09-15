@@ -36,7 +36,7 @@
 
         <dependency>
             <groupId>org.sitecenter</groupId>
-            <artifactId>geoip-common</artifactId>
+            <artifactId>geoip-spring</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
