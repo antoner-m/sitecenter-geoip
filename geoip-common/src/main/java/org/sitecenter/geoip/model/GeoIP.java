@@ -3,9 +3,11 @@ package org.sitecenter.geoip.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @NoArgsConstructor
-public class GeoIP {
+public class GeoIP implements Serializable {
     private String ipAddress;
     private String country;
     private String countryIsoCode;
