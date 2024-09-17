@@ -5,6 +5,7 @@ import org.sitecenter.geoip.model.GeoIP;
 import com.maxmind.geoip2.DatabaseReader;
 import com.maxmind.geoip2.exception.GeoIp2Exception;
 import com.maxmind.geoip2.model.CityResponse;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -20,7 +21,11 @@ public class GeoIPLocationServiceImpl implements GeoIPLocationService {
     private final DatabaseReader countryDatabaseReader;
     private static final String UNKNOWN = "UNKNOWN";
 
-    public GeoIPLocationServiceImpl(DatabaseReader cityDatabaseReader, DatabaseReader countryDatabaseReader) {
+    public GeoIPLocationServiceImpl(
+            @Qualifier("cityDatabaseReader")
+            DatabaseReader cityDatabaseReader,
+            @Qualifier("countryDatabaseReader")
+            DatabaseReader countryDatabaseReader) {
         this.cityDatabaseReader = cityDatabaseReader;
         this.countryDatabaseReader = countryDatabaseReader;
     }
