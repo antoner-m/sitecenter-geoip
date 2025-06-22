@@ -22,6 +22,7 @@
 
     <modules>
         <module>geoip-common</module>
+        <module>geoip-client</module>
         <module>geoip-spring</module>
         <module>geoip-server</module>
     </modules>
